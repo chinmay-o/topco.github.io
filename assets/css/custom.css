@@ -1,0 +1,151 @@
+
+.logo {
+
+  margin-left: 40px !important;
+}
+
+.logo-mobile {
+
+  display: none !important;
+}
+
+.custom-logo {
+
+  max-width: 90px !important;
+  padding: 6px !important;
+}
+
+.header {
+
+  margin-bottom: 10px !important;
+}
+
+.tp-loader {
+
+  display: none !important;
+}
+
+.gold-rate-mobile {
+
+  display: none !important;
+}
+
+.gold-rate h3 {
+
+  font-size: 28px !important;
+  color: #ffffff !important;
+}
+
+.gold-rate div {
+
+    font-size: 30px !important;
+    line-height: 40px !important;
+    color: #ffffff !important;
+}
+
+.gold_rate .gold, .silver {
+
+  display: inline-flex !important;
+}
+
+.filter-title .product-filter-menu li {
+
+  font-size: 20px !important;
+  line-height: 0 !important;
+}
+
+.brand-logo-area .img-fluid {
+
+  max-width: 80% !important;
+}
+
+.logo-bottom {
+
+  margin-left: none !important;
+  max-width: 90px !important;
+  padding: 6px !important;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+
+  .header-bottom-container .header-bottom-navigation {
+
+    flex-basis: 100% !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .logo {
+
+    margin-left: 0 !important;
+  }
+
+  .custom-logo {
+
+    max-width: 50px !important;
+    padding: 0 !important;
+  }
+
+  .brand-logo-area .img-fluid {
+
+    max-width: 40% !important;
+  }
+
+  .hamburger-box {
+
+    height: 0px !important;
+  }
+
+  .logo-web {
+
+    display: none !important;
+  }
+
+  .logo-mobile {
+
+    display: block !important;
+  }
+
+  .gold-rate-web {
+
+    display: none !important;
+  }
+
+  .gold-rate-mobile {
+
+    display: block !important;
+  }
+
+  .countdown-background {
+
+    background-position: -300px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .countdown-background {
+
+    background-position: -200px !important;
+  }
+
+  .gold-rate h3 {
+
+    font-size: 24px !important;
+    color: #ffffff !important;
+  }
+
+  .gold-rate div {
+
+      font-size: 20px !important;
+      line-height: 40px !important;
+      color: #ffffff !important;
+  }
+
+  .filter-title .product-filter-menu li .filter-separator {
+
+    margin: 0 6px !important;
+  }
+}
