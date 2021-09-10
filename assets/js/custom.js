@@ -4,34 +4,6 @@ $(window).on('load', function(){
     });
 });
 
-let xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    let data = JSON.parse(this.responseText).feed.entry;
-
-    let date = data[0]["gsx$date"]["$t"];
-    let gram = data[0]["gsx$gram"]["$t"];
-    let eightGram = gram*8;
-    let silver = data[0]["gsx$silver"]["$t"];
-
-    document.getElementById("datePrint").innerHTML += "<h3>" + date + "</h3>";
-    document.getElementById("gramPrint").innerHTML += "<span>" + gram + "</span>";
-    document.getElementById("eightPrint").innerHTML += "<span>" + eightGram + "</span>";
-    document.getElementById("silverPrint").innerHTML += "<span>" + silver + "</span>";
-
-    document.getElementById("gramPrintMobile").innerHTML += "<span>" + gram + "</span>";
-    document.getElementById("eightPrintMobile").innerHTML += "<span>" + eightGram + "</span>";
-    document.getElementById("silverPrintMobile").innerHTML += "<span>" + silver + "</span>";
-  };
-};
-
-xmlhttp.open(
-  "GET",
-  "https://spreadsheets.google.com/feeds/list/1NBmuhKvEgvnfuGZXz7N1DmefHV7c7KaXlk0lFaqx_Mg/od6/public/values?alt=json",
-  true
-);
-xmlhttp.send();
-
 (function() {
 
 if(!('ontouchend' in document)) return;
