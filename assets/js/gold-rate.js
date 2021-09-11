@@ -1,7 +1,9 @@
 
 let data = null;
+var url = "https://sheets.googleapis.com/v4/spreadsheets/1NBmuhKvEgvnfuGZXz7N1DmefHV7c7KaXlk0lFaqx_Mg/values/Data!A2%3AC2?majorDimension=COLUMNS&key="
+var apiKey = "AIzaSyAxtMtDoFdL-OePGW-h1SMXGYnpEtZ56cY";
 
-fetch("https://sheets.googleapis.com/v4/spreadsheets/1NBmuhKvEgvnfuGZXz7N1DmefHV7c7KaXlk0lFaqx_Mg/values/Data!A2%3AC2?majorDimension=COLUMNS&key=AIzaSyAxtMtDoFdL-OePGW-h1SMXGYnpEtZ56cY")
+fetch(url+apiKey)
   .then((response) => response.json()) //2
   .then((values) => {
     data = values; //3

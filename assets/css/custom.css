@@ -148,4 +148,14 @@
 
     margin: 0 6px !important;
   }
+
+  .header {
+
+    margin-bottom: 0 !important;
+  }
+
+  .slider-area {
+
+    margin-top: 0 !important;
+  }
 }
