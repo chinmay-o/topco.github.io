@@ -16204,7 +16204,7 @@ nav.site-nav > ul > li ul.mega-menu-column-5 > li .mega-sub-menu li:last-child a
   font-size: 35px;
 
   position: absolute;
-  top: 50%;
+  top: 74%;
   right: 0;
 
   padding: 0;
@@ -16213,7 +16213,7 @@ nav.site-nav > ul > li ul.mega-menu-column-5 > li .mega-sub-menu li:last-child a
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 
-  color: #cccccc;
+  color: #333333;
   border: none;
   background: none;
 }

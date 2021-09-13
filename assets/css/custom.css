@@ -67,11 +67,21 @@
   margin-bottom: 20px;
 }
 
+.banner-content .custom-name {
+
+  margin-bottom: 44px !important;
+}
+
 @media screen and (max-width: 1199px) {
 
   .header-bottom-container .header-bottom-navigation {
 
     flex-basis: 100% !important;
+  }
+
+  .banner-content .custom-name {
+
+    margin-bottom: 2px !important;
   }
 }
 
@@ -177,7 +187,12 @@
 
   .custom-header-about-us {
 
-    padding-top: 10px !important;
+    padding-top: 30px !important;
     padding-bottom: 10px !important;
+  }
+
+  .banner-content .custom-name {
+
+    /* margin-bottom: 24px !important; */
   }
 }
