@@ -126,6 +126,12 @@
 
 @media screen and (max-width: 500px) {
 
+  .custom-intro {
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .countdown-background {
 
     background-position: -200px !important;
