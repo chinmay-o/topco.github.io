@@ -33,14 +33,14 @@
 .gold-rate h3 {
 
   font-size: 28px !important;
-  color: #ffffff !important;
+  color: #333333 !important;
 }
 
 .gold-rate div {
 
     font-size: 30px !important;
     line-height: 40px !important;
-    color: #ffffff !important;
+    color: #333333 !important;
 }
 
 .gold_rate .gold, .silver {
@@ -132,22 +132,27 @@
     padding-right: 0;
   }
 
+  .custom-intro-second {
+
+    margin-bottom: 20px !important;
+  }
+
   .countdown-background {
 
-    background-position: -200px !important;
+    background-position: -150px !important;
   }
 
   .gold-rate h3 {
 
     font-size: 24px !important;
-    color: #ffffff !important;
+    /* color: #000000 !important; */
   }
 
   .gold-rate div {
 
       font-size: 20px !important;
       line-height: 40px !important;
-      color: #ffffff !important;
+      /* color: #ffffff !important; */
   }
 
   .filter-title .product-filter-menu li .filter-separator {
