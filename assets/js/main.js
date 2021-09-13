@@ -414,172 +414,172 @@
   });
 
   /*----------  instagram image slider  ----------*/
-
-  jQuery(window).on("load", function () {
-    // User Changeable Access
-    var instagramFeedGrid = function () {
-      $.instagramFeed({
-        username: "creative.devitems",
-        container: "#instagramFeed",
-        display_profile: false,
-        display_biography: false,
-        display_gallery: true,
-        callback: null,
-        styling: false,
-        items: 8
-      });
-    };
-
-    instagramFeedGrid();
-
-    var instagramFeedSlider = function () {
-      $.instagramFeed({
-        username: "portfolio.devitems",
-        container: "#instagramFeedTwo",
-        display_profile: false,
-        display_biography: false,
-        display_gallery: true,
-        callback: null,
-        styling: false,
-        items: 8
-      });
-    };
-
-    instagramFeedSlider();
-
-    var instagramFeedSliderTwo = function () {
-      $.instagramFeed({
-        username: "creative.devitems",
-        container: "#instagramFeedThree",
-        display_profile: false,
-        display_biography: false,
-        display_gallery: true,
-        callback: null,
-        styling: false,
-        items: 8
-      });
-    };
-
-    instagramFeedSliderTwo();
-
-    $("#instagramFeedThree").on("DOMNodeInserted", function (e) {
-      if (e.target.className === "instagram_gallery") {
-        $(".instagram-carousel .instagram_gallery").slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: false,
-          dots: false,
-          arrows: true,
-          prevArrow:
-            '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
-          nextArrow:
-            '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
-          responsive: [
-            {
-              breakpoint: 1499,
-              settings: {
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 1199,
-              settings: {
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 991,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 1
-              }
-            },
-            {
-              breakpoint: 575,
-              settings: {
-                slidesToShow: 1
-              }
-            },
-            {
-              breakpoint: 479,
-              settings: {
-                slidesToShow: 1
-              }
-            }
-          ]
-        });
-      }
-    });
-
-    $("#instagramFeedTwo").on("DOMNodeInserted", function (e) {
-      if (e.target.className === "instagram_gallery") {
-        $(".instagram-carousel-type2 .instagram_gallery").slick({
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          autoplay: false,
-          dots: false,
-          arrows: true,
-          prevArrow:
-            '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
-          nextArrow:
-            '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
-          responsive: [
-            {
-              breakpoint: 1499,
-              settings: {
-                slidesToShow: 4
-              }
-            },
-            {
-              breakpoint: 1199,
-              settings: {
-                slidesToShow: 4
-              }
-            },
-            {
-              breakpoint: 991,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 1
-              }
-            },
-            {
-              breakpoint: 575,
-              settings: {
-                slidesToShow: 1
-              }
-            },
-            {
-              breakpoint: 479,
-              settings: {
-                slidesToShow: 1
-              }
-            }
-          ]
-        });
-      }
-    });
-
-    /*----------  newsletter popup  ----------*/
-
-    if (screenSize >= 767) {
-      $("#newsletter-popup-body").addClass("newsletter-overlay-active");
-
-      setTimeout(function () {
-        $("#newsletter-content").addClass("show-popup");
-      }, 1000);
-    }
-  });
+  // 
+  // jQuery(window).on("load", function () {
+  //   // User Changeable Access
+  //   var instagramFeedGrid = function () {
+  //     $.instagramFeed({
+  //       username: "creative.devitems",
+  //       container: "#instagramFeed",
+  //       display_profile: false,
+  //       display_biography: false,
+  //       display_gallery: true,
+  //       callback: null,
+  //       styling: false,
+  //       items: 8
+  //     });
+  //   };
+  //
+  //   instagramFeedGrid();
+  //
+  //   var instagramFeedSlider = function () {
+  //     $.instagramFeed({
+  //       username: "portfolio.devitems",
+  //       container: "#instagramFeedTwo",
+  //       display_profile: false,
+  //       display_biography: false,
+  //       display_gallery: true,
+  //       callback: null,
+  //       styling: false,
+  //       items: 8
+  //     });
+  //   };
+  //
+  //   instagramFeedSlider();
+  //
+  //   var instagramFeedSliderTwo = function () {
+  //     $.instagramFeed({
+  //       username: "creative.devitems",
+  //       container: "#instagramFeedThree",
+  //       display_profile: false,
+  //       display_biography: false,
+  //       display_gallery: true,
+  //       callback: null,
+  //       styling: false,
+  //       items: 8
+  //     });
+  //   };
+  //
+  //   instagramFeedSliderTwo();
+  //
+  //   $("#instagramFeedThree").on("DOMNodeInserted", function (e) {
+  //     if (e.target.className === "instagram_gallery") {
+  //       $(".instagram-carousel .instagram_gallery").slick({
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         autoplay: false,
+  //         dots: false,
+  //         arrows: true,
+  //         prevArrow:
+  //           '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
+  //         nextArrow:
+  //           '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
+  //         responsive: [
+  //           {
+  //             breakpoint: 1499,
+  //             settings: {
+  //               slidesToShow: 3
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 1199,
+  //             settings: {
+  //               slidesToShow: 3
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 991,
+  //             settings: {
+  //               slidesToShow: 2
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 767,
+  //             settings: {
+  //               slidesToShow: 1
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 575,
+  //             settings: {
+  //               slidesToShow: 1
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 479,
+  //             settings: {
+  //               slidesToShow: 1
+  //             }
+  //           }
+  //         ]
+  //       });
+  //     }
+  //   });
+  //
+  //   $("#instagramFeedTwo").on("DOMNodeInserted", function (e) {
+  //     if (e.target.className === "instagram_gallery") {
+  //       $(".instagram-carousel-type2 .instagram_gallery").slick({
+  //         slidesToShow: 4,
+  //         slidesToScroll: 1,
+  //         autoplay: false,
+  //         dots: false,
+  //         arrows: true,
+  //         prevArrow:
+  //           '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
+  //         nextArrow:
+  //           '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
+  //         responsive: [
+  //           {
+  //             breakpoint: 1499,
+  //             settings: {
+  //               slidesToShow: 4
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 1199,
+  //             settings: {
+  //               slidesToShow: 4
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 991,
+  //             settings: {
+  //               slidesToShow: 2
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 767,
+  //             settings: {
+  //               slidesToShow: 1
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 575,
+  //             settings: {
+  //               slidesToShow: 1
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 479,
+  //             settings: {
+  //               slidesToShow: 1
+  //             }
+  //           }
+  //         ]
+  //       });
+  //     }
+  //   });
+  //
+  //   /*----------  newsletter popup  ----------*/
+  //
+  //   if (screenSize >= 767) {
+  //     $("#newsletter-popup-body").addClass("newsletter-overlay-active");
+  //
+  //     setTimeout(function () {
+  //       $("#newsletter-content").addClass("show-popup");
+  //     }, 1000);
+  //   }
+  // });
 
   /*----------  cloth tag positioning  ----------*/
 
