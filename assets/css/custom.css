@@ -12,7 +12,7 @@
 .custom-logo {
 
   max-width: 90px !important;
-  padding: 6px !important;
+  padding: 0px 6px 6px 6px !important;
 }
 
 .header {
@@ -168,5 +168,16 @@
   .slider-area {
 
     margin-top: 0 !important;
+  }
+
+  .custom-about-us {
+
+    margin-top: 10px !important;
+  }
+
+  .custom-header-about-us {
+
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 }
