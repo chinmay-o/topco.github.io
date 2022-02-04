@@ -547,17 +547,14 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
 					<div class="lezada-form contact-form">
-						<form id="contact-form" action="#" method="post">
+						<form id="enquiry_form01">
 							<div class="row">
 								<div class="col-md-6 mb-40">
-									<input type="text" placeholder="First Name *" name="customerName" id="customername" required>
+									<input type="text" placeholder="Full Name *" name="customerName" id="customerName01" required>
 								</div>
 								<div class="col-md-6 mb-40">
-									<input type="email" placeholder="Mobile Number *" name="customerEmail" id="customerEmail" required>
+									<input type="text" placeholder="Mobile Number *" name="customerMobile" id="customerMobile01" required>
 								</div>
-								<!-- <div class="col-lg-12 mb-40">
-									<input type="text" placeholder="Product" name="contactSubject" id="contactSubject">
-								</div> -->
 								<div class="col-lg-12 text-center">
 									<button type="submit" value="submit" id="submit"
 										class="lezada-button lezada-button--medium">submit</button>
@@ -675,9 +672,9 @@
 						<!--=======  subscription form  =======-->
 
 						<div class="subscription-form">
-							<form id="mc-form" class="mc-form">
-								<input type="text" placeholder="Name" required>
-								<input type="text" placeholder="Mobile Number" required>
+							<form id="enquiry_form02" class="mc-form">
+								<input type="text" id="customerName02" placeholder="Name" required>
+								<input type="text" id="customerMobile02" placeholder="Mobile Number" required>
 								<button type="submit"><i class="ion-ios-arrow-thin-right"></i></button>
 							</form>
 						</div>
@@ -722,9 +719,33 @@
 	<!-- Plugins JS -->
 	<script src="assets/js/plugins.js"></script>
 
+	<!-- Firebase Database JS -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+
 	<!-- Main JS -->
 	<script src="assets/js/main.js"></script>
 
+	<!-- Custom JS -->
+	<script src="https://momentjs.com/downloads/moment.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/firebae.js"></script>
+	<script src="assets/js/enquiry.js"></script>
+
+	<!-- Revolution Slider JS -->
+	<script src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="assets/revolution/revolution-active.js"></script>
+
+	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 </body>
 
 </html>

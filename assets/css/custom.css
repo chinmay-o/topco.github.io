@@ -25,9 +25,9 @@
   display: none !important;
 }
 
-.gold-rate-mobile {
+.single-product__floating-badges span {
 
-  display: none !important;
+  text-transform: capitalize !important;
 }
 
 .gold-rate h3 {
@@ -56,7 +56,7 @@
 
 .brand-logo-area .img-fluid {
 
-  max-width: 80% !important;
+  max-width: 60% !important;
 }
 
 .logo-bottom {
@@ -120,13 +120,13 @@
 
   .gold-rate-web {
 
-    display: none !important;
+    display: block !important;
   }
-
+/*
   .gold-rate-mobile {
 
     display: block !important;
-  }
+  } */
 
   .countdown-background {
 
@@ -183,6 +183,11 @@
   .custom-about-us {
 
     margin-top: 10px !important;
+  }
+
+  .date-karnataka {
+
+    margin-top: 30px !important;
   }
 
   .custom-header-about-us {

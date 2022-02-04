@@ -1,22 +1,55 @@
 
-let data = null;
-var url = "https://sheets.googleapis.com/v4/spreadsheets/1NBmuhKvEgvnfuGZXz7N1DmefHV7c7KaXlk0lFaqx_Mg/values/Data!A2%3AC2?majorDimension=COLUMNS&key="
-var apiKey = "AIzaSyAxtMtDoFdL-OePGW-h1SMXGYnpEtZ56cY";
+let goldRateDBKL = firebase.database().ref('goldRate-database-kerala').limitToLast(1);
+let goldRateDBKA = firebase.database().ref('goldRate-database-karnataka').limitToLast(1);
 
-fetch(url+apiKey)
-  .then((response) => response.json()) //2
-  .then((values) => {
-    data = values; //3
-    let date = data.values[0];
-    let gram = data.values[1];
-    let eightGram = gram * 8;
-    let silver = data.values[2];
-    document.getElementById("datePrint").innerHTML += "<h3>" + date + "</h3>";
-    document.getElementById("gramPrint").innerHTML += "<span>" + gram + "</span>";
-    document.getElementById("eightPrint").innerHTML += "<span>" + eightGram + "</span>";
-    document.getElementById("silverPrint").innerHTML += "<span>" + silver + "</span>";
+let todaysGoldRateKL;
+let todaysGoldRateKA;
+let goldRateArrayKL = [];
+let goldRateArrayKA = [];
 
-    document.getElementById("gramPrintMobile").innerHTML += "<span>" + gram + "</span>";
-    document.getElementById("eightPrintMobile").innerHTML += "<span>" + eightGram + "</span>";
-    document.getElementById("silverPrintMobile").innerHTML += "<span>" + silver + "</span>";
-  });
+goldRateDBKL.on("value", function(snapshot) {
+
+   todaysGoldRateKL = snapshot.val();
+   for (let key in todaysGoldRateKL) {
+
+     goldRateArrayKL.push(todaysGoldRateKL[key]);
+   }
+}, function (error) {
+
+   console.log("Error: " + error.code);
+});
+
+goldRateDBKA.on("value", function(snapshot) {
+
+   todaysGoldRateKA = snapshot.val();
+   for (let key in todaysGoldRateKA) {
+
+     goldRateArrayKA.push(todaysGoldRateKA[key]);
+   }
+}, function (error) {
+
+   console.log("Error: " + error.code);
+});
+
+function goldRateDisplay() {
+
+  document.getElementById('dateKL').innerHTML = goldRateArrayKL[0].date;
+  document.getElementById('dateKA').innerHTML = goldRateArrayKA[0].date;
+  document.getElementById('gramPrintKL').innerHTML = goldRateArrayKL[0].rateGold;
+  document.getElementById('eightPrintKL').innerHTML = (goldRateArrayKL[0].rateGold)*8;
+  document.getElementById('silverPrintKL').innerHTML = goldRateArrayKL[0].rateSilver;
+  document.getElementById('gramPrintKA').innerHTML = goldRateArrayKA[0].rateGold;
+  document.getElementById('eightPrintKA').innerHTML = (goldRateArrayKA[0].rateGold)*8;
+  document.getElementById('silverPrintKA').innerHTML = goldRateArrayKA[0].rateSilver;
+}
+
+var loadAPI = setInterval(checkAPILoader, 100);
+
+function checkAPILoader() {
+
+  if (goldRateArrayKL != 0 && goldRateArrayKA != 0) {
+
+    goldRateDisplay();
+    clearInterval(loadAPI);
+  }
+}
