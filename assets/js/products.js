@@ -169,7 +169,7 @@ function productHTML() {
         carat = '22CT';
       }
 
-      document.getElementById('product-page').innerHTML += '<div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xl-is-five mb-45 '+ tempShuffledArray[i].category +'">' +
+      document.getElementById('product-page').innerHTML += '<div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xl-is-five mb-45 '+ tempShuffledArray[i].category +' '+ tempShuffledArray[i].type +'">' +
         '<div class="single-product">' +
 
         '<div class="single-product__image">' +
@@ -191,7 +191,7 @@ function productHTML() {
         '</div>' +
         '<div class="price">' +
         '<span class="discounted-price">'+ tempShuffledArray[i].gram +' Grams</span>' +
-        // '<span class="discounted-price"> | 22 CT</span>' +
+        '<span class="discounted-price"> | '+ tempShuffledArray[i].category +'</span>' +
         '</div>' +
         '<div class="price">' +
         '<span class="discounted-price">Net Wt.: '+ tempShuffledArray[i].netGram +' Grams</span>' +
