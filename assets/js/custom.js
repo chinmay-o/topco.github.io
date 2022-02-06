@@ -1,5 +1,6 @@
+
 $(window).on('load', function(){
-    $('#preloder').delay(700).fadeOut('slow', function(){
+    $('#preloder').delay(1000).fadeOut('slow', function(){
         $("#content").removeClass("hidden");
     });
 });
@@ -58,3 +59,31 @@ jQuery('.rev_slider').on('touchstart', function(event) {
     linked = newX = false;
 
 });})();
+
+function goldRateScroll() {
+
+  $('html, body').animate({
+    scrollTop: $("#goldRate-content").offset().top - 240
+  }, 1000);
+}
+
+function collectionScroll() {
+
+  $('html, body').animate({
+    scrollTop: $("#collection-content").offset().top - 240
+  }, 1000);
+}
+
+function productScroll() {
+
+  $('html, body').animate({
+    scrollTop: $("#product-content").offset().top - 240
+  }, 1000);
+}
+
+function contactScroll() {
+
+  $('html, body').animate({
+    scrollTop: $("#contact-content").offset().top - 240
+  }, 1000);
+}

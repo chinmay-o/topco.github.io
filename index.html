@@ -108,11 +108,11 @@
 						<div class="site-main-nav d-none d-lg-block">
 							<nav class="site-nav center-menu">
 								<ul>
-									<li class="menu-item-has-children"><a href="javascript:void(0)">Gold Rate</a></li>
-									<li class="menu-item-has-children"><a href="javascript:void(0)">Collections</a></li>
-									<li class="menu-item-has-children"><a href="javascript:void(0)">Products</a></li>
-									<li class="menu-item-has-children "><a href="javascript:void(0)">Contact</a></li>
-									<li class="menu-item-has-children"><a href="about-us.html">About Us</a></li>
+									<li class="menu-item-has-children"><a href="javascript:goldRateScroll()">Gold Rate</a></li>
+									<li class="menu-item-has-children"><a href="javascript:collectionScroll()">Collections</a></li>
+									<li class="menu-item-has-children"><a href="products">Products</a></li>
+									<li class="menu-item-has-children "><a href="javascript:contactScroll()">Contact</a></li>
+									<li class="menu-item-has-children"><a href="about-us">About Us</a></li>
 
 								</ul>
 							</nav>
@@ -143,11 +143,11 @@
 						</button>
 						<!--Site Mobile Menu Toggle End-->
 						<ul class="dl-menu dl-menu-toggle">
-							<li class=""><a href="javascript:void(0)">Gold Rate</a></li>
-							<li><a href="javascript:void(0)">Collections</a></li>
-							<li><a href="javascript:void(0)">Products</a></li>
-							<li><a href="javascript:void(0)">Contact</a></li>
-							<li><a href="about-us.html">About Us</a></li>
+							<li><a href="javascript:goldRateScroll()">Gold Rate</a></li>
+							<li><a href="javascript:collectionScroll()">Collections</a></li>
+							<li><a href="products">Products</a></li>
+							<li><a href="javascript:contactScroll()">Contact</a></li>
+							<li><a href="about-us">About Us</a></li>
 						</ul>
 					</div>
 				</div>
@@ -240,7 +240,7 @@
 											data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
 											data-paddingright="[0,0,0,0]" data-paddingbottom="[3,3,3,3]" data-paddingleft="[0,0,0,0]"
 											style="z-index: 7; white-space: nowrap; letter-spacing: 1px;border-color:rgb(51,51,51);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-											<a class="revslider-button-red" style="color: white;" href="javascript:void(0)">COLLECTIONS</a>
+											<a class="revslider-button-red" style="color: white;" href="javascript:collectionScroll()">COLLECTIONS</a>
 										</div>
 									</li>
 									<!-- SLIDE  -->
@@ -300,7 +300,7 @@
 											data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
 											data-paddingright="[0,0,0,0]" data-paddingbottom="[3,3,3,3]" data-paddingleft="[0,0,0,0]"
 											style="z-index: 7; white-space: nowrap; letter-spacing: 1px;border-color:rgb(51,51,51);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-											<a class="revslider-button-red" style="color: white;" href="javascript:void(0)">COLLECTIONS</a>
+											<a class="revslider-button-red" style="color: white;" href="javascript:collectionScroll()">COLLECTIONS</a>
 										</div>
 									</li>
 									<!-- SLIDE  -->
@@ -360,7 +360,7 @@
 											data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
 											data-paddingright="[0,0,0,0]" data-paddingbottom="[3,3,3,3]" data-paddingleft="[0,0,0,0]"
 											style="z-index: 7; white-space: nowrap; letter-spacing: 1px;border-color:rgb(51,51,51);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-											<a class="revslider-button-red" style="color: white;" href="javascript:void(0)">COLLECTIONS</a>
+											<a class="revslider-button-red" style="color: white;" href="javascript:collectionScroll()">COLLECTIONS</a>
 										</div>
 									</li>
 								</ul>
@@ -377,7 +377,7 @@
 							<!--=======  hover zoom banner  =======-->
 
 							<div class="single-banner single-banner--hoverzoom">
-								<a href="javascript:void(0)">
+								<a href="javascript:productScroll()">
 									<img src="assets/images/Images/banner-comestic-1.jpg" class="img-fluid" alt="">
 									<span class="banner-content banner-content--product-type banner-content--product-type--bigtitle">
 										<span class="name custom-name">For your <span>loved ones</span></span>
@@ -392,7 +392,7 @@
 							<!--=======  hover zoom banner  =======-->
 
 							<div class="single-banner single-banner--hoverzoom">
-								<a href="javascript:void(0)">
+								<a href="javascript:productScroll()">
 									<img src="assets/images/Images/banner-comestic-2.jpg" class="img-fluid" alt="">
 									<span class="banner-content banner-content--product-type banner-content--product-type--bigtitle">
 										<span class="name custom-name">Crafted <span> with love</span></span>
@@ -415,7 +415,7 @@
     =            gold rate area         =
     =============================================-->
 
-		<div class="col-lg-12 mt-100 mb-60 mt-sm-60 mb-sm-40">
+		<div id="goldRate-content" class="col-lg-12 mt-100 mb-60 mt-sm-60 mb-sm-40">
 				<!--=======  section title  =======-->
 
 			<div class="section-title section-title--one text-center">
@@ -484,7 +484,7 @@
     =            slider area         =
     =============================================-->
 
-	<div class="col-lg-12 mt-100 mb-60 mt-sm-40 mb-sm-40">
+	<div id="collection-content" class="col-lg-12 mt-100 mb-60 mt-sm-40 mb-sm-40">
 			<!--=======  section title  =======-->
 
 		<div class="section-title section-title--one text-center">
@@ -553,7 +553,7 @@
         				Collection
         			</div>
 
-        			<a href="javascript:void(0)" class="lezada-button lezada-button--medium">See Products</a>
+        			<a href="javascript:productScroll()" class="lezada-button lezada-button--medium">See Products</a>
         		</div>
 
         		<!--=======  End of slider content  =======-->
@@ -586,7 +586,7 @@
               Collections
             </div>
 
-            <a href="javascript:void(0)" class="lezada-button lezada-button--medium">See Products</a>
+            <a href="javascript:productScroll()" class="lezada-button lezada-button--medium">See Products</a>
           </div>
 
           <!--=======  End of slider content  =======-->
@@ -619,7 +619,7 @@
               Collection
             </div>
 
-            <a href="javascript:void(0)" class="lezada-button lezada-button--medium">See Products</a>
+            <a href="javascript:productScroll()" class="lezada-button lezada-button--medium">See Products</a>
           </div>
 
           <!--=======  End of slider content  =======-->
@@ -651,7 +651,7 @@
               Collections
             </div>
 
-            <a href="javascript:void(0)" class="lezada-button lezada-button--medium">See Products</a>
+            <a href="javascript:productScroll()" class="lezada-button lezada-button--medium">See Products</a>
           </div>
 
           <!--=======  End of slider content  =======-->
@@ -684,7 +684,7 @@
               Collections
             </div>
 
-            <a href="javascript:void(0)" class="lezada-button lezada-button--medium">See Products</a>
+            <a href="javascript:productScroll()" class="lezada-button lezada-button--medium">See Products</a>
           </div>
 
           <!--=======  End of slider content  =======-->
@@ -779,7 +779,7 @@
               data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
               data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
               style="z-index: 12; white-space: nowrap; font-size: 48px; line-height: 64px; font-weight: 400; color: #333333; letter-spacing: 0px;font-family:Work Sans;">
-              Purity, Trust, Transparency </div>
+              Green Perl Bangles </div>
 
             <!-- LAYER NR. 9 -->
             <div class="tp-caption   tp-resizeme" id="slide-49-layer-11" data-x="['left','left','left','left']"
@@ -805,7 +805,7 @@
               data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]"
               style="z-index: 14; white-space: nowrap; letter-spacing: 1px;border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
               <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
-              <a class="revslider-button" href="javascript:void(0)">More Products</a>
+              <a class="revslider-button" href="about-us">About Us</a>
             </div>
           </li>
         </ul>
@@ -823,7 +823,7 @@
 	=            product isotope area         =
 	=============================================-->
 
-	<div class="col-lg-12 mt-100 mb-60 mt-sm-40 mb-sm-40">
+	<div id="product-content" class="col-lg-12 mt-100 mb-60 mt-sm-40 mb-sm-40">
 			<!-- =======  section title  ======= -->
 
 		<div class="section-title section-title--one text-center">
@@ -854,7 +854,7 @@
 
 					<div class="row">
 						<div class="col-lg-12 text-center mt-25">
-							<a href="#" class="lezada-button lezada-button--medium"> <i class="ion-plus"></i>
+							<a href="products" class="lezada-button lezada-button--medium"> <i class="ion-plus"></i>
 								more products</a>
 						</div>
 					</div>
@@ -927,7 +927,7 @@
 
 	<!-- =====  End of brand logo area  ====== -->
 
-	<div class="col-lg-12 mt-100 mb-60 mt-sm-40 mb-sm-40">
+	<div id="contact-content" class="col-lg-12 mt-100 mb-60 mt-sm-40 mb-sm-40">
 			<!-- =======  section title  ======= -->
 
 		<div class="section-title section-title--one text-center">
