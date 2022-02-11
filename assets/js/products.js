@@ -58,6 +58,26 @@ function errorCode02(productSet) {
   console.log('hello');
 }
 
+function searchProduct() {
+    let input = document.getElementById('searchbar').value;
+    input = input.toUpperCase();
+
+    console.log(input);
+
+    for (i = 0; i < productArray.length; i++) {
+
+        if (!(productArray[i].id).toUpperCase().includes(input)) {
+
+            $('#' + productArray[i].id).css("display", "none");
+        }
+        else {
+
+            console.log((productArray[i].id).toUpperCase());
+            $('#' + productArray[i].id).css("display", "table-row")
+        }
+    }
+}
+
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
 
@@ -82,7 +102,7 @@ function productHTML() {
 
     for (var i = 0; i < productArray.length; i++) {
 
-      document.getElementById('products-admin').innerHTML += '<tr id='+ productArray[i].id +'>' +
+      document.getElementById('products-admin').innerHTML += '<tr class="adminProducts" id='+ productArray[i].id +'>' +
         '<td class="product-price"><span class="price">'+ productArray[i].id +'</span></td>' +
         '<td class="product-thumbnail">' +
           '<a href="#">' +
@@ -140,11 +160,10 @@ function productHTML() {
 
         '<div class="title">' +
         '<h3> <a href="#">'+ tempShuffledArray[i].title +'</a></h3>' +
-        '<a href="#">Enquire</a>' +
+        '<a href="https://api.whatsapp.com/send?phone=919400186522&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
         '</div>' +
         '<div class="price">' +
         '<span class="discounted-price">'+ tempShuffledArray[i].gram +' Grams</span>' +
-        // '<span class="discounted-price"> | 22 CT</span>' +
         '</div>' +
         '<div class="price">' +
         '<span class="discounted-price">Net Wt.: '+ tempShuffledArray[i].netGram +' Grams</span>' +
@@ -187,11 +206,10 @@ function productHTML() {
 
         '<div class="title">' +
         '<h3> <a href="#">'+ tempShuffledArray[i].title +'</a></h3>' +
-        '<a href="#">Enquire</a>' +
+        '<a href="https://api.whatsapp.com/send?phone=919400186522&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
         '</div>' +
         '<div class="price">' +
         '<span class="discounted-price">'+ tempShuffledArray[i].gram +' Grams</span>' +
-        '<span class="discounted-price"> | '+ tempShuffledArray[i].category +'</span>' +
         '</div>' +
         '<div class="price">' +
         '<span class="discounted-price">Net Wt.: '+ tempShuffledArray[i].netGram +' Grams</span>' +
@@ -203,53 +221,3 @@ function productHTML() {
     }
   }
 }
-
-//
-// function productHTML() {
-//
-//   // /aishagold.com/products.html
-//   if (htmlPath == '/products.html') {
-//
-//     for (var i = 0; i < productArray.length; i++) {
-//
-//       document.getElementById('products-pages').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 element-item prints " data-category="'+ productArray[i].category +'">' +
-//         '<div class="portfolio-fullimage bg-white">' +
-//         '<img id='+ productArray[i].key +' onerror="errorCode('+ productArray[i].key.toString() +')" src="' + productArray[i].productURL01 + '" alt="image_not_found">' +
-//         '<a href="#!" class="details-btn"><i class="fal fa-plus"></i></a>' +
-//         '<div class="item-content">' +
-//         '<h3 class="item-title">'+ productArray[i].title +'</h3>' +
-//         '<span class="item-brand">'+ productArray[i].gram + ' | ' + productArray[i].karat +'</span>' +
-//         '</div>' +
-//         '</div>' +
-//         '</div>'
-//     }
-//
-//   } else if (htmlPath == '/aishagold.com/add-products.html') {
-//
-//     for(var i = 0; i < productArray.length; i++) {
-//
-//       document.getElementById('product-listings').innerHTML += '<tr data-aos="fade-up" data-aos-delay="200">'+
-//         '<td><img src="'+ productArray[i].productURL01 +'" width="100" alt=""></td>'+
-//         '<td><h6 class="item-title">'+ productArray[i].title +'</h6></td>'+
-//         '<td><h6 class="item-title">'+ productArray[i].category +'</h6></td>'+
-//         '<td><h6 class="item-title">'+ productArray[i].gram +'</h6></td>'+
-//         '<td><h6 class="item-title">'+ productArray[i].karat +'</h6></td>'+
-//         '</tr>';
-//     }
-//
-//   } else {
-//
-//     for (var i = 0; i < 6; i++) {
-//
-//       document.getElementById('home-products').innerHTML += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">' +
-//         '<a href="#!" class="portfolio-fullimage add-effect">' +
-//         '<img src="' + productArray[i].productURL01 + '" alt="image_not_found">' +
-//         '<span class="item-content-2">' +
-//         '<strong class="item-title">'+ productArray[i].title +'</strong>' +
-//         '<small class="item-brand">'+ productArray[i].gram + ' | ' + productArray[i].karat +'</small>' +
-//         '</span>' +
-//         '</a>' +
-//         '</div>'
-//     }
-//   }
-// }

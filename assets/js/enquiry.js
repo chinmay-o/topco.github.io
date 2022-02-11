@@ -11,7 +11,7 @@ function submitForm(e) {
   var name = getInput('customerName01');
   var mobile = getInput('customerMobile01');
 
-  saveEnquiry(name, mobile);
+  saveEnquiry(name, mobile, "submitForm");
 }
 
 function submitFormX(e) {
@@ -21,7 +21,7 @@ function submitFormX(e) {
   var name = getInput('customerName02');
   var mobile = getInput('customerMobile02');
 
-  saveEnquiry(name, mobile);
+  saveEnquiry(name, mobile, "submitFormX");
 }
 
 function getInput(id) {
@@ -29,7 +29,15 @@ function getInput(id) {
   return document.getElementById(id).value;
 }
 
-function saveEnquiry(name, mobile){
+function clearMessage() {
+
+  setTimeout(function() {
+
+    document.getElementById('form-messege').innerHTML = "";
+  }, 6000)
+}
+
+function saveEnquiry(name, mobile, formName){
 
   var newEnquiry = enquiryRef.push();
   newEnquiry.set({
@@ -41,11 +49,27 @@ function saveEnquiry(name, mobile){
   .then(function() {
 
     console.log('Synchronization succeeded');
-    $('#enquiry_form01')[0].reset();
-    $('#enquiry_form02')[0].reset();
+    if (formName == "submitForm") {
+
+      $('#enquiry_form01')[0].reset();
+      document.getElementById('form-messege').innerHTML = "Successfully Submitted";
+    } else if (formName == "submitFormX") {
+
+      $('#enquiry_form02')[0].reset();
+      document.getElementById('mailchimp-message').innerHTML = "Successfully Submitted";
+    }
+    clearMessage();
   })
   .catch(function(error) {
 
     console.log('Synchronization failed');
+    if (formName == "submitForm") {
+
+      document.getElementById('form-messege').innerHTML = "Failed to Submit. Try again";
+    } else if (formName == "submitFormX") {
+
+      document.getElementById('mailchimp-message').innerHTML = "Failed to Submit. Try again";
+    }
+    clearMessage();
   });
 }

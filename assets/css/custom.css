@@ -72,6 +72,12 @@
   margin-bottom: 44px !important;
 }
 
+.form-messege {
+
+  text-align: center;
+}
+
+
 @media screen and (max-width: 1199px) {
 
   .header-bottom-container .header-bottom-navigation {
