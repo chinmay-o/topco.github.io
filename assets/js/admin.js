@@ -204,7 +204,7 @@ function signingOut() {
 
   firebase.auth().signOut().then(() => {
 
-    window.location.href = "/admin-signin.html";
+    window.location.href = "/signin.html";
   }).catch((error) => {
 
     console.log('Signing Out Failed')
