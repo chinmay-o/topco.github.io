@@ -164,7 +164,7 @@ function productHTML() {
           '<a href="https://api.whatsapp.com/send?phone=919349166916&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
           '</div>' +
           '<div class="price">' +
-          '<span class="discounted-price">₹'+ tempShuffledArray[i].gram +'</span>' +
+          '<span class="discounted-price">'+ tempShuffledArray[i].gram +'</span>' +
           '</div>' +
           '<div class="price">' +
           '<span class="discounted-price">Model No.: '+ tempShuffledArray[i].netGram +'</span>' +
@@ -245,7 +245,7 @@ function productHTML() {
           '<a href="https://api.whatsapp.com/send?phone=919349166916&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
           '</div>' +
           '<div class="price">' +
-          '<span class="discounted-price">₹'+ tempShuffledArray[i].gram +'</span>' +
+          '<span class="discounted-price">'+ tempShuffledArray[i].gram +'</span>' +
           '</div>' +
           '<div class="price">' +
           '<span class="discounted-price">Model No.: '+ tempShuffledArray[i].netGram +'</span>' +
