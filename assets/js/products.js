@@ -142,36 +142,71 @@ function productHTML() {
         carat = '22CT';
       }
 
-      document.getElementById('product-home').innerHTML += '<div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xl-is-five mb-45 '+ tempShuffledArray[i].category +'">' +
-        '<div class="single-product">' +
+      if (tempShuffledArray[i].category == 'Esco') {
 
-        '<div class="single-product__image">' +
-        '<a class="image-wrap" href="#">' +
-        '<img src="'+ tempShuffledArray[i].productURL01 +'" class="img-fluid" alt="">' +
-        '</a>' +
+        document.getElementById('product-home').innerHTML += '<div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xl-is-five mb-45 '+ tempShuffledArray[i].category +'">' +
+          '<div class="single-product">' +
 
-        '<div class="single-product__floating-badges">' +
-        '<span class="hot">'+ carat +'</span>' +
-        '</div>' +
+          '<div class="single-product__image">' +
+          '<a class="image-wrap" href="#">' +
+          '<img src="'+ tempShuffledArray[i].productURL01 +'" class="img-fluid" alt="">' +
+          '</a>' +
 
-        '</div>' +
+          '<div class="single-product__floating-badges">' +
+          '</div>' +
 
-        '<div class="single-product__content">' +
+          '</div>' +
 
-        '<div class="title">' +
-        '<h3> <a href="#">'+ tempShuffledArray[i].title +'</a></h3>' +
-        '<a href="https://api.whatsapp.com/send?phone=919349166916&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
-        '</div>' +
-        '<div class="price">' +
-        '<span class="discounted-price">'+ tempShuffledArray[i].gram +' Grams</span>' +
-        '</div>' +
-        '<div class="price">' +
-        '<span class="discounted-price">Net Wt.: '+ tempShuffledArray[i].netGram +' Grams</span>' +
-        '</div>' +
-        '</div>' +
+          '<div class="single-product__content">' +
 
-        '</div>' +
-        '</div>'
+          '<div class="title">' +
+          '<h3> <a href="#">'+ tempShuffledArray[i].title +'</a></h3>' +
+          '<a href="https://api.whatsapp.com/send?phone=919349166916&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
+          '</div>' +
+          '<div class="price">' +
+          '<span class="discounted-price">₹'+ tempShuffledArray[i].gram +'</span>' +
+          '</div>' +
+          '<div class="price">' +
+          '<span class="discounted-price">Model No.: '+ tempShuffledArray[i].netGram +'</span>' +
+          '</div>' +
+          '</div>' +
+
+          '</div>' +
+          '</div>'
+
+      } else {
+
+        document.getElementById('product-home').innerHTML += '<div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xl-is-five mb-45 '+ tempShuffledArray[i].category +'">' +
+          '<div class="single-product">' +
+
+          '<div class="single-product__image">' +
+          '<a class="image-wrap" href="#">' +
+          '<img src="'+ tempShuffledArray[i].productURL01 +'" class="img-fluid" alt="">' +
+          '</a>' +
+
+          '<div class="single-product__floating-badges">' +
+          '<span class="hot">'+ carat +'</span>' +
+          '</div>' +
+
+          '</div>' +
+
+          '<div class="single-product__content">' +
+
+          '<div class="title">' +
+          '<h3> <a href="#">'+ tempShuffledArray[i].title +'</a></h3>' +
+          '<a href="https://api.whatsapp.com/send?phone=919349166916&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
+          '</div>' +
+          '<div class="price">' +
+          '<span class="discounted-price">'+ tempShuffledArray[i].gram +' Grams</span>' +
+          '</div>' +
+          '<div class="price">' +
+          '<span class="discounted-price">Net Wt.: '+ tempShuffledArray[i].netGram +' Grams</span>' +
+          '</div>' +
+          '</div>' +
+
+          '</div>' +
+          '</div>'
+      }
     }
   } else {
 
@@ -188,36 +223,71 @@ function productHTML() {
         carat = '22CT';
       }
 
-      document.getElementById('product-page').innerHTML += '<div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xl-is-five mb-45 '+ tempShuffledArray[i].category +' '+ tempShuffledArray[i].type +'">' +
-        '<div class="single-product">' +
+      if (tempShuffledArray[i].category == 'Esco') {
 
-        '<div class="single-product__image">' +
-        '<a class="image-wrap" href="#">' +
-        '<img src="'+ tempShuffledArray[i].productURL02 +'" class="img-fluid" alt="">' +
-        '</a>' +
+        document.getElementById('product-page').innerHTML += '<div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xl-is-five mb-45 '+ tempShuffledArray[i].category +'">' +
+          '<div class="single-product">' +
 
-        '<div class="single-product__floating-badges">' +
-        '<span class="hot">'+ carat +'</span>' +
-        '</div>' +
+          '<div class="single-product__image">' +
+          '<a class="image-wrap" href="#">' +
+          '<img src="'+ tempShuffledArray[i].productURL01 +'" class="img-fluid" alt="">' +
+          '</a>' +
 
-        '</div>' +
+          '<div class="single-product__floating-badges">' +
+          '</div>' +
 
-        '<div class="single-product__content">' +
+          '</div>' +
 
-        '<div class="title">' +
-        '<h3> <a href="#">'+ tempShuffledArray[i].title +'</a></h3>' +
-        '<a href="https://api.whatsapp.com/send?phone=919349166916&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
-        '</div>' +
-        '<div class="price">' +
-        '<span class="discounted-price">'+ tempShuffledArray[i].gram +' Grams</span>' +
-        '</div>' +
-        '<div class="price">' +
-        '<span class="discounted-price">Net Wt.: '+ tempShuffledArray[i].netGram +' Grams</span>' +
-        '</div>' +
-        '</div>' +
+          '<div class="single-product__content">' +
 
-        '</div>' +
-        '</div>'
+          '<div class="title">' +
+          '<h3> <a href="#">'+ tempShuffledArray[i].title +'</a></h3>' +
+          '<a href="https://api.whatsapp.com/send?phone=919349166916&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
+          '</div>' +
+          '<div class="price">' +
+          '<span class="discounted-price">₹'+ tempShuffledArray[i].gram +'</span>' +
+          '</div>' +
+          '<div class="price">' +
+          '<span class="discounted-price">Model No.: '+ tempShuffledArray[i].netGram +'</span>' +
+          '</div>' +
+          '</div>' +
+
+          '</div>' +
+          '</div>'
+
+      } else {
+
+        document.getElementById('product-page').innerHTML += '<div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xl-is-five mb-45 '+ tempShuffledArray[i].category +'">' +
+          '<div class="single-product">' +
+
+          '<div class="single-product__image">' +
+          '<a class="image-wrap" href="#">' +
+          '<img src="'+ tempShuffledArray[i].productURL01 +'" class="img-fluid" alt="">' +
+          '</a>' +
+
+          '<div class="single-product__floating-badges">' +
+          '<span class="hot">'+ carat +'</span>' +
+          '</div>' +
+
+          '</div>' +
+
+          '<div class="single-product__content">' +
+
+          '<div class="title">' +
+          '<h3> <a href="#">'+ tempShuffledArray[i].title +'</a></h3>' +
+          '<a href="https://api.whatsapp.com/send?phone=919349166916&text=Hi,%20This%20is%20an%20enquiry%20about%20'+ tempShuffledArray[i].title +'('+ tempShuffledArray[i].id +').">Enquire</a>' +
+          '</div>' +
+          '<div class="price">' +
+          '<span class="discounted-price">'+ tempShuffledArray[i].gram +' Grams</span>' +
+          '</div>' +
+          '<div class="price">' +
+          '<span class="discounted-price">Net Wt.: '+ tempShuffledArray[i].netGram +' Grams</span>' +
+          '</div>' +
+          '</div>' +
+
+          '</div>' +
+          '</div>'
+      }
     }
   }
 }
