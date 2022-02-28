@@ -22,6 +22,7 @@ function submitForm(e) {
 
       var errorCode = error.code;
       var errorMessage = error.message;
+      $("#login-alert").text(error.message)
     });
 }
 
